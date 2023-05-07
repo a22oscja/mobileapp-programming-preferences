@@ -10,6 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:parentActivityName=".MainActivity"
             android:name=".SecondActivity"
             android:exported="false" />
         <activity
