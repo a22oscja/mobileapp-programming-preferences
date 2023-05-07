@@ -6,6 +6,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -31,7 +32,9 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
+        TextView textView = findViewById(R.id.textView);
         SharedPreferences sharedPref = getSharedPreferences("sharedPref",MODE_PRIVATE);
-
+        String text = sharedPref.getString("text","");
+        textView.setText(text);
     }
 }
